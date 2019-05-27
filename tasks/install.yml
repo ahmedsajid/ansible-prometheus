@@ -1,4 +1,9 @@
 ---
+- name: stop prometheus if running
+  systemd:
+    name: prometheus
+    state: stopped
+
 - name: create prometheus system group
   group:
     name: prometheus
